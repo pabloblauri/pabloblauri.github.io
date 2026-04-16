@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Pablo Blanco | Soporte Técnico</title>
+    <link rel="icon" type="image/png" href="logotipo.png">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<section id="main">
+	<header id="header">
+    <div id="header_content">
+
+      <a href="enlace_de_la_pagina_web"><p id="img-logo" title="Ir a pabloblauri.com">PB<span id="dot">.</span></p></a>
+
+        <nav id="nav">
+          <ul id="links">
+            <li><a href="#home">INICIO</a></li>
+            <li><a href="#about">ACERCA DE</a></li>
+            <li><a href="#certificates">CERTIFICADOS</a></li>
+            <li><a href="#services">SERVICIOS</a></li>
+            <li><a href="#contact">CONTACTO</a></li>
+          </ul>
+        </nav>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <a href="enlace_de_la_pagina_web"><p class="nav-logo" title="Ir a pabloblauri.com">PB<span id="dot">.</span></p></a>
+
+    <div class="nav-links" id="menu">
+      <a href="#close" class="nav-target-x"><i class="fa-solid fa-xmark"></i></a>
+      <a href="#home" class="nav-link">INICIO</a>
+      <a href="#about" class="nav-link">ACERCA DE</a>
+      <a href="#certificates" class="nav-link">CERTIFICADOS</a>
+      <a href="#services" class="nav-link">SERVICIOS</a>
+      <a href="#contact" class="nav-link">CONTACTO</a>
+    </div>
+
+    <a href="#menu" class="nav-target"><i class="fa-solid fa-bars"></i></a>
+  </nav>
+</section>
+
+<!-- SECCIÓN INICIO -->
+<div id="particles-js"></div>
+  <section id="home">
+      <div class="content">
+        <img src="logotipo.png">
+        <h1>Soporte <span>Técnico</span>.</h1>
+      </div>
+  </section>
+
+<!-- SECCIÓN ACERCA DE -->
+  <section id="about">
+    <div class="foto">
+      <img src="foto_perfil.png" alt="foto">
+
+      <div id="personal-links">
+        <a download="pablo_blanco_cv_2026" href="pablo_blanco_cv_2026.pdf" target="_blank" title="Puedes ver y descargar mi CV"><i class="fa-regular fa-user"></i> Ver currículum</a>
+      </div>
+    </div>
+
+    <div class="personal-info">
+      <h1>Mi <span>trabajo</span>.</h1>
+      <p>En mi experiencia como técnico freelance, he trabajado tanto con particulares como con empresas, realizando mantenimiento preventivo, limpieza interna de computadoras y soporte técnico para impresoras y otros equipos.</p><br>
+      <p>Me enfoco en ofrecer un servicio técnico claro, honesto y orientado a las necesidades del cliente, explicando cada solución de forma sencilla y comprensible. También brindo asesoría en la adquisición de equipos, actualización de componentes y buenas prácticas para el cuidado de los sistemas informáticos.</p>
+
+      <div class="extra-container">
+      <button id="btn-mas" title="Más información">+</button>
+        <div id="extra-texto">
+          <p>Mis responsabilidades como profesional de soporte técnico:</p><br>
+          <ul>
+            <li>Diagnosticar, resolver y documentar problemas de hardware y software de los dispositivos.</li>
+            <li>Instalar, configurar y mantener sistemas operativos Windows y aplicaciones esenciales para el usuario.</li>
+            <li>Realizar mantenimiento preventivo de equipos y optimización de su rendimiento.</li>
+            <li>Seleccionar, ensamblar, actualizar y reparar componentes de computadoras de acuerdo a las necesidades del usuario.</li>
+            <li>Configurar equipos y dispositivos para su integración en redes locales y acceso a Internet.</li>
+            <li>Administrar y dar soporte a impresoras, periféricos y otros dispositivos de red.</li>
+            <li>Asesorar y capacitar a usuarios en el uso seguro y eficiente de software, hardware y herramientas tecnológicas.</li>
+            <li>Implementar medidas básicas de seguridad informática y protección de datos en redes y dispositivos.</li>
+            <li>Aplicar metodologías de <span>troubleshooting</span> (identificación, diagnóstico, análisis, solución, implementación y verificación) para resolver problemas técnicos de manera eficiente.</li>
+            <li>Mantener documentación actualizada de incidencias, soluciones y procedimientos técnicos.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="personal-links-2">
+      <a download="pablo_blanco_cv_2026" href="pablo_blanco_cv_2026.pdf" target="_blank" title="Puedes ver y descargar mi CV"><i class="fa-regular fa-user"></i> Ver currículum</a>
+    </div>
+
+<script>
+  const btn = document.getElementById("btn-mas");
+  const texto = document.getElementById("extra-texto");
+
+  btn.addEventListener("click", () => {
+
+    // CERRAR
+    if (texto.style.maxHeight) {
+      texto.style.maxHeight = null;
+      btn.textContent = "+";
+    } 
+    
+    // ABRIR
+    else {
+      texto.style.maxHeight = texto.scrollHeight + "px";
+      btn.textContent = "−";
+
+      // SCROLL SUAVE PERO MÁS CORTO
+      setTimeout(() => {
+        const offset = 160;
+        const posicion = texto.getBoundingClientRect().top + window.scrollY;
+
+        window.scrollTo({
+          top: posicion - offset,
+          behavior: "smooth"
+        });
+      }, 200);
+    }
+  });
+
+  // RESPONSIVE
+  window.addEventListener("resize", () => {
+    if (texto.style.maxHeight) {
+      texto.style.maxHeight = texto.scrollHeight + "px";
+    }
+  });
+</script>
+
+  </section>
+
+<!-- SECCIÓN CERTIFICADOS -->
+  <section id="certificates">
+    <h1>Mis <span>certificados</span>.</h1>
+    <div class="row">
+      <div class="certificate">
+        <img src="pablo_blanco_certificado_Responsive_Web_Design.jpg" alt="Certificado" title="Responsive Design">
+      </div>
+
+      <div class="certificate">
+        <img src="pablo_blanco_certificado_Excel.jpg" alt="Certificado" title="Tablas Dinámicas en Excel">
+      </div>
+
+      <div class="certificate">
+        <img src="pablo_blanco_certificado_MySQL_Workbench.jpg" alt="Certificado" title="MySQL Workbench">
+      </div>
+
+      <div class="certificate">
+        <img src="pablo_blanco_certificado_Computadoras_Portátiles.jpg" alt="Certificado" title="Reparación de Computadoras Portátiles">
+      </div>
+
+      <div class="certificate">
+        <img src="pablo_blanco_certificado_Cisco_Packet_Tracer.jpg" alt="Certificado" title="Cisco Packet Tracer">
+      </div>
+
+      <div class="certificate">
+        <img src="pablo_blanco_certificado_Intecap_IT_Essentials.jpg" alt="Certificado" title="Intecap IT Essentials">
+      </div>
+
+      <div class="certificate">
+        <img src="pablo_blanco_certificado_Cisco_IT_Essentials.jpg" alt="Certificado" title="Cisco IT Essentials">
+      </div>
+
+      <div class="certificate">
+        <img src="pablo_blanco_certificado_Cisco_Ciberseguridad.jpg" alt="Certificado" title="Cisco Fundamentos de Ciberseguridad">
+      </div>
+
+      <div class="certificate">
+        <img src="pablo_blanco_titulo_carrera_intecap.png" alt="Certificado" title="Título de la Carrera: Técnico en Reparación y Soporte de Sistemas Informáticos">
+      </div>
+
+      <div class="certificate">
+        <img src="pablo_blanco_certificado_Electrónica_Básica.jpg" alt="Certificado" title="Electrónica Básica">
+      </div>
+    </div>
+
+    <div id="lightbox">
+      <span id="close">&times;</span>
+      <img id="lightbox-img">
+    </div>
+
+<script>
+const images = document.querySelectorAll(".certificate img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const closeBtn = document.getElementById("close");
+
+// Configuración de niveles de zoom
+const zoomLevels = [1, 1.5, 2, 3]; // personalizable
+let currentZoomIndex = 0;
+
+let scale = 1;
+let isDragging = false;
+let startX = 0, startY = 0;
+let currentX = 0, currentY = 0;
+
+// Función para limitar la posición de la imagen
+function clampPosition() {
+    const rect = lightboxImg.getBoundingClientRect();
+    const parentRect = lightbox.getBoundingClientRect();
+
+    const maxX = Math.max(0, (rect.width - parentRect.width) / 2);
+    const maxY = Math.max(0, (rect.height - parentRect.height) / 2);
+
+    currentX = Math.min(Math.max(currentX, -maxX), maxX);
+    currentY = Math.min(Math.max(currentY, -maxY), maxY);
+}
+
+// Actualiza transform
+function updateTransform() {
+    clampPosition();
+    lightboxImg.style.transform = `translate(${currentX}px, ${currentY}px) scale(${scale})`;
+}
+
+// Abrir lightbox
+images.forEach(img => {
+    img.addEventListener("click", () => {
+        lightbox.style.display = "flex";
+        lightboxImg.src = img.src;
+        scale = 1;
+        currentX = 0;
+        currentY = 0;
+        currentZoomIndex = 0;
+        updateTransform();
+    });
+});
+
+// Cerrar lightbox
+closeBtn.addEventListener("click", () => lightbox.style.display = "none");
+lightbox.addEventListener("click", e => {
+    if (e.target !== lightboxImg) lightbox.style.display = "none";
+});
+
+// Función para avanzar en los niveles de zoom
+function zoomStepCycle() {
+    currentZoomIndex++;
+    if (currentZoomIndex >= zoomLevels.length) {
+        currentZoomIndex = 0; // reinicia al último nivel
+        currentX = 0;
+        currentY = 0;
+    }
+    scale = zoomLevels[currentZoomIndex];
+    updateTransform();
+}
+
+// Doble clic (desktop)
+lightboxImg.addEventListener("dblclick", zoomStepCycle);
+
+// Doble tap (móvil)
+let lastTap = 0;
+lightboxImg.addEventListener("touchend", e => {
+    const currentTime = new Date().getTime();
+    const tapLength = currentTime - lastTap;
+    if (tapLength < 300 && tapLength > 0) {
+        zoomStepCycle();
+    }
+    lastTap = currentTime;
+});
+
+// Arrastre con mouse
+lightboxImg.addEventListener("mousedown", e => {
+    if (scale <= 1) return;
+    isDragging = true;
+    startX = e.clientX;
+    startY = e.clientY;
+});
+
+window.addEventListener("mousemove", e => {
+    if (!isDragging) return;
+    const dx = e.clientX - startX;
+    const dy = e.clientY - startY;
+    startX = e.clientX;
+    startY = e.clientY;
+    currentX += dx;
+    currentY += dy;
+    updateTransform();
+});
+
+window.addEventListener("mouseup", () => isDragging = false);
+
+// Arrastre con touch
+lightboxImg.addEventListener("touchstart", e => {
+    if (scale <= 1) return;
+    if (e.touches.length === 1) {
+        isDragging = true;
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+    }
+});
+
+window.addEventListener("touchmove", e => {
+    if (!isDragging) return;
+    const dx = e.touches[0].clientX - startX;
+    const dy = e.touches[0].clientY - startY;
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+    currentX += dx;
+    currentY += dy;
+    updateTransform();
+}, { passive: false });
+
+window.addEventListener("touchend", () => isDragging = false);
+
+// Inicializar
+window.addEventListener("load", () => lightbox.style.display = "none");
+</script>
+
+  </section>
+
+<!-- SECCIÓN SERVICIOS -->
+  <section id="services">
+    <h1>Servicios <span>técnicos</span>.</h1>
+    <div class="row">
+      <div class="services">
+        <img src="asesoría.png" alt="Asesoría">
+        <h3>Asesoría</h3>
+        <hr>
+        <p>Brindo orientación para ayudar a tomar las mejores decisiones en el área informática. Ya sea en la compra de equipos, actualización de componentes o implementación de soluciones tecnológicas, analizo las necesidades del cliente y recomiendo opciones eficientes, funcionales y ajustadas a su presupuesto.</p>
+      </div>
+
+      <div class="services">
+        <img src="diagnóstico.png" alt="Diagnóstico">
+        <h3>Diagnóstico</h3>
+        <hr>
+        <p>Realizo evaluaciones completas de equipos de cómputo para identificar fallas tanto de hardware como de software. A través de herramientas especializadas y pruebas técnicas, determino la causa del problema y propongo soluciones claras antes de proceder con cualquier reparación.</p>
+      </div>
+
+      <div class="services">
+        <img src="hardware.png" alt="Hardware">
+        <h3>Hardware</h3>
+        <hr>
+        <p>Llevo a cabo limpieza interna y revisión de componentes físicos para prevenir fallas y prolongar la vida útil del equipo. Esto incluye eliminación de polvo, verificación de temperaturas, revisión de ventiladores, fuentes de poder y conexiones.</p>
+      </div>
+
+      <div class="services">
+        <img src="software.png" alt="Software">
+        <h3>Software</h3>
+        <hr>
+        <p>Optimizo el rendimiento del sistema mediante limpieza de archivos innecesarios, actualización de programas, eliminación de virus o malware y configuración adecuada del sistema operativo. Esto permite un funcionamiento más rápido, seguro y estable.</p>
+      </div>
+
+      <div class="services">
+        <img src="reparación.png" alt="Ciberseguridad">
+        <h3>Reparación</h3>
+        <hr>
+        <p>Realizo reparaciones a nivel electrónico en equipos informáticos, identificando y corrigiendo fallas en placas, componentes y circuitos. Este servicio permite recuperar equipos que muchas veces se consideran irreparables, reduciendo costos de reemplazo.</p>
+      </div>
+
+      <div class="services">
+        <img src="redes.png" alt="Redes">
+        <h3>Redes</h3>
+        <hr>
+        <p>Instalo y configuro redes locales para hogares y pequeños negocios. Esto incluye conexión de dispositivos, configuración de routers, cableado básico y solución de problemas de conectividad para asegurar una red estable y funcional.</p>
+      </div>
+    </div>
+  </section>
+
+<!-- SECCIÓN CONTACTO -->
+<section id="contact">
+  <h1>¡Pongámonos en <span>contacto</span>!</h1>
+    <div class="contact">
+      <div id="half1">
+        <div class="name">
+          <h3>Email:</h3>
+          <p>p.a.blauri@gmail.com</p>
+        </div>
+        <div class="location">
+          <h3>Ubicación:</h3>
+          <p>Ciudad de Guatemala, Guatemala.</p>
+        </div>
+      </div>
+      <div id="half2">
+        <a href="https://github.com/pabloblauri/pablo_blanco_website" target="_blank" title="Puedes ver el repositorio de mi página web en GitHub"><img src="botón_github.jpg" alt="GitHub"></a>
+      </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+  <footer id="footer">
+    <p>Diseñado y desarrollado por Pablo Blanco.</p>
+    <p>© 2026. Todos los derechos reservados.</p>
+    <p id="flaticon"><a href="https://www.flaticon.com/free-icons/ux" title="ux icons">Ux icons created by Freepik - Flaticon</a></p>
+  </footer>
+
+  <script src="header.js"></script>
+  <script src="particles.min.js"></script>
+  <script src="particlesjs-config.json"></script>
+
+</body>
+</html>

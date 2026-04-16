@@ -1,0 +1,815 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* NAVBAR */ /* NAVBAR *//* NAVBAR */
+
+#main #header {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+#main #header_content {
+    max-width: 1400px;
+    margin: auto;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#img-logo {
+    color: white;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 60px;
+}
+
+#dot {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#main #header #header_content a {
+    text-decoration: none;
+}
+
+#main #header_content #nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#main #header_content #nav ul li {
+    list-style: none;
+    display: inline;
+}
+
+#main #header_content #nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin: 0 15px;
+    transition: 0.5s;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#main #header_content #nav ul li a:hover {
+    color: darkcyan;
+}
+
+.nav {
+    display: none;
+}
+
+#nav-icon {
+    color: white;
+    font-size: 25px;
+    display: none;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+/* SECCIÓN INICIO */ /* SECCIÓN INICIO */ /* SECCIÓN INICIO */
+
+canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#home {
+    background-color: #072f4e;
+    width: 100%;
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home img {
+    border-radius: 50%;
+    width: 175px;
+    height: 175px;
+}
+
+.content img {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#home h1 {
+    font-size: 42px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 20px auto;
+}
+
+span {
+    color: darkcyan;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* SECCIÓN ACERCA DE */ /* SECCIÓN ACERCA DE */ /* SECCIÓN ACERCA DE */
+
+#about {
+    max-width: 1100px;
+    height: 100%;
+    padding: 150px 0;
+    margin: auto;
+    display: flex;
+    color: black;
+}
+
+#about .personal-info h1 {
+    font-size: 50px;
+    margin-bottom: 35px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#about .foto {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 50px;
+}
+
+#about .foto img {
+    border-radius: 50%;
+    border: solid 4px darkcyan;
+    width: 400px;
+    height: 400px;
+    margin-top: -15px;
+}
+
+#about .personal-info {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 50px;
+}
+
+#about .personal-info p {
+    color: black;
+    font-size: 18px;
+    text-align: left;
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 30px;
+}
+
+#about #personal-links {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+#about .foto a {
+    color: black;
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#about .foto a:hover {
+    color: darkcyan;
+}
+
+#about #personal-links-2 {
+    display: none;
+}
+
+.extra-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#btn-mas {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#btn-mas:hover {
+    background-color: darkcyan;
+}
+
+#extra-texto {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+#about .extra-container #extra-texto p {
+    font-family: 'Segoe UI', sans-serif;
+    margin-top: 35px;
+}
+
+#extra-texto ul {
+    padding-left: 20px;
+}
+
+#extra-texto li {
+    color: #333;
+    font-family: 'Segoe UI', sans-serif;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+#extra-texto ul li::marker {
+    color: #072f4e;
+}
+
+/* SECCIÓN CERTIFICADOS */ /* SECCIÓN CERTIFICADOS */ /* SECCIÓN CERTIFICADOS */
+
+#certificates {
+    height: 100%;
+    width: 100%;
+    padding-top: 130px;
+    padding-bottom: 130px;
+    background-image: url(wall.webp);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#certificates h1 {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#certificates .row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1100px;
+    margin: auto auto;
+    justify-items: center;
+}
+
+#certificates .row .certificate:last-child {
+    grid-column: 2;
+}
+
+#certificates .row .certificate {
+    margin-top: 50px;
+}
+
+#certificates .certificate img {
+    display: block;
+    margin: 0 auto;
+    width: 250px;
+    height: 250px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+#certificates .certificate img:hover {
+    transform: scale(1.05);
+}
+
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 999;
+}
+
+#lightbox-img {
+    cursor: grab;
+    user-select: none;
+    transition: transform 0.5s ease;
+    max-width: 85%;
+    max-height: 85%;
+}
+
+#lightbox-img:active {
+    cursor: grabbing;
+}
+
+#close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+/* SECCIÓN SERVICIOS */ /* SECCIÓN SERVICIOS */ /* SECCIÓN SERVICIOS */
+
+#services {
+    height: 100%;
+    width: 100%;
+    padding-top: 130px;
+    padding-bottom: 130px;
+    color: black;
+    background-color: #072f4e;
+}
+
+#services h1 {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 30px;
+}
+
+#services .row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto auto;
+    justify-items: center;
+}
+
+#services .row .services {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+#services .row .services:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+#services .services img {
+    display: flex;
+    margin: 20px auto;
+    width: 100px;
+    height: 100px;
+}
+
+#services .services h3 {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+}
+
+#services .services hr {
+    margin: 20px auto;
+}
+
+#services .services p {
+    font-size: 16.5px;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 26.5px;
+}
+
+/* SECCIÓN CONTACTO */ /* SECCIÓN CONTACTO */ /* SECCIÓN CONTACTO */
+
+#contact {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    color: black;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#contact h1 {
+    font-size: 50px;
+    margin-bottom: 65px;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#contact .name {
+    margin-bottom: 35px;
+}
+
+#contact h3 {
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#contact p {
+    color: #333;
+    font-size: 18px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+#contact img {
+    width: 100%;
+    height: 110px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+#contact img:hover {
+    transform: scale(1.05);
+}
+
+/* FOOTER */ /* FOOTER */ /* FOOTER */
+
+#footer {
+    width: 100%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding: 40px 0;
+}
+
+#footer p {
+    color: white;
+    font-size: 14px;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    line-height: 25px;
+}
+
+#flaticon {
+    display: none;
+}
+
+/* RESPONSIVE DESIGN RESPONSIVE DESIGN RESPONSIVE DESIGN RESPONSIVE DESIGN RESPONSIVE DESIGN RESPONSIVE DESIGN RESPONSIVE DESIGN RESPONSIVE DESIGN */
+
+@media screen and (max-width: 1200px) {
+
+    /* HEADER */ /* HEADER */ /* HEADER */
+
+    #header_content #nav ul li a {
+        display: none;
+    }
+
+    #img-logo {
+        display: none;
+    }
+
+    #main #header {
+        display: none;
+    }
+
+    /* MENU RESPONSIVE */ /* MENU RESPONSIVE */ /* MENU RESPONSIVE */
+
+    .nav {
+        background-color: black;
+        opacity: 0.9;
+        position: fixed;
+        width: 100%;
+        z-index: 999;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+        padding: 12px 20px;
+    }
+
+    .nav-target {
+        color: white;
+        font-size: 30px;
+        transition: 0.5s;
+    }
+
+    .nav-target:hover {
+        color: darkcyan;
+    }
+
+    .nav-target-x {
+        color: white;
+        font-size: 30px;
+        transition: 0.5s;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .nav-target-x:hover {
+        color: darkcyan;
+    }
+
+    .nav-logo {
+        color: white;
+        font-weight: bold;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 50px;
+    }
+
+    #dot {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    .nav a {
+        text-decoration: none;
+    }
+
+    .nav-links {
+        font-size: 22px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        padding-right: 40px;
+        gap: 25px;
+        background-color: black;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in-out;
+        pointer-events: none;
+    }
+
+    .nav-links:target {
+        clip-path: circle(150% at top right);
+        pointer-events: all;
+        transform: translateX(0);
+        pointer-events: all;
+    }
+
+    .nav-links a {
+        color: white;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        padding: 14px;
+        letter-spacing: 5px;
+        text-decoration: none;
+        text-align: right;
+    }
+
+    .nav-links a:hover {
+        color: white;
+        background-color: darkcyan;
+        border-radius: 100px;
+        width: 85%;
+        text-align: center;
+        transition: 0.5s;
+    }
+
+    /* INICIO RESPONSIVE */ /* INICIO RESPONSIVE */ /* INICIO RESPONSIVE */
+
+    #home h1 {
+        text-align: center;
+        font-size: 32px;
+    }
+
+    #home img {
+        border-radius: 50%;
+        width: fit-content;
+        height: fit-content;
+    }
+
+    /* ACERCA DE RESPONSIVE */ /* ACERCA DE RESPONSIVE */ /* ACERCA DE RESPONSIVE */
+
+    #about {
+        height: 100%;
+        padding-top: 35px;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 100px;
+        display: block;
+    }
+
+    #about .personal-info h1 {
+        text-align: center;
+        margin: 35px auto;
+        font-size: 35px;
+    }
+    
+    #about .foto {
+        max-width: 250px;
+        margin: auto;
+    }
+    
+    #about .foto img {
+        margin-top: 70px;
+        width: 100%;
+        height: 100%;
+    }
+
+    #about .personal-info {
+        margin: auto 50px;
+    }
+
+    #about .personal-info p {
+        font-size: 20px;
+        line-height: 32px;
+        text-align: justify;
+    }
+
+    #about #personal-links {
+        display: none;
+    }
+    
+    #about #personal-links-2 {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    #about #personal-links-2 a {
+        color: black;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 25px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+
+    #about #personal-links-2 a:hover {
+        color: darkcyan;
+    }
+
+    .btn-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    #btn-mas {
+        width: 45px;
+        height: 45px;
+        font-size: 25px;
+    }
+
+    /* CERTIFICADOS RESPONSIVE */ /* CERTIFICADOS RESPONSIVE */ /* CERTIFICADOS RESPONSIVE */
+
+    #certificates {
+        height: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    #certificates h1 {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 35px;
+    }
+
+    #certificates .row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        max-width: 700px;
+        margin: 50px auto;
+    }
+
+    #certificates .row .certificate {
+        max-width: initial;
+    }
+
+    /* SERVICIOS RESPONSIVE */ /* SERVICIOS RESPONSIVE */ /* SERVICIOS RESPONSIVE */
+
+    #services {
+        height: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    #services h1 {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 35px;
+    }
+
+    #services .row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        max-width: 700px;
+        margin: 50px auto;
+    }
+
+    #services .row .services {
+        max-width: initial;
+    }
+
+    /* CONTACTO RESPONSIVE */ /* CONTACTO RESPONSIVE */ /* CONTACTO RESPONSIVE */
+
+    .contact {
+        display: block;
+        margin: auto;
+    }
+
+    #contact h1 {
+        font-size: 35px;
+        margin-bottom: 35px;
+    }
+
+    #half1 {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    #half2 {
+        margin-top: 35px;
+        display: flex;
+        justify-content: center;
+    }
+
+    #contact img {
+        height: 85px;
+    }
+
+    /* FOOTER RESPONSIVE */ /* FOOTER RESPONSIVE */ /* FOOTER RESPONSIVE */
+
+    #footer {
+        padding: 40px 25px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    /* NAV-LINKS NAV-LINKS NAV-LINKS */
+
+    .nav-links {
+        width: 100%;
+        padding-right: 20px;
+        gap: 20px;
+    }
+
+    .nav-link {
+        font-size: 18px;
+        letter-spacing: 3px;
+    }
+
+    .nav-target {
+        font-size: 26px;
+    }
+
+    .nav-target-x {
+        font-size: 26px;
+        top: 15px;
+        right: 15px;
+    }
+
+    .nav-logo {
+        font-size: 35px;
+    }
+
+    /* ACERCA DE ACERCA DE ACERCA DE */
+
+    #about .personal-info p {
+        font-size: 18px;
+        line-height: 26px;
+        text-align: justify;
+    }
+
+    /* CERTIFICADOS CERTIFICADOS CERTIFICADOS */
+
+    #certificates .row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-width: 350px;
+        margin: 50px auto;
+    }
+
+    #certificates .row .certificate:last-child {
+        grid-column: 1;
+    }
+
+    /* SERVICIOS SERVICIOS SERVICIOS */
+
+    #services .row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-width: 350px;
+        margin: 50px auto;
+    }
+}
